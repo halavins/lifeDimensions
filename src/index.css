@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles for better mobile experience */
+html, body {
+  overscroll-behavior-x: none; /* Prevent unwanted scrolling behaviors */
+}
+
+/* Vertical text for dimension labels */
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 6px 2px;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  min-height: 100px;
+  text-transform: uppercase;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  /* Better scroll handling for mobile */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    padding-bottom: 8px; /* Ensure space for scrollbar */
+  }
+  
+  /* Keep the dimension column visible while scrolling */
+  .grid-dimension-fixed {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Tighter text for mobile */
+  .text-xs {
+    font-size: 0.7rem;
+    line-height: 1.1;
+  }
+  
+  /* More compact vertical text for mobile */
+  .vertical-text {
+    padding: 8px 2px;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+  }
+  
+  /* Reduce all cell gaps on mobile */
+  .gap-1 {
+    gap: 2px;
+  }
+}

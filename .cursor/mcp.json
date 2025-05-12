@@ -1,8 +1,23 @@
 {
     "mcpServers": {
       "supabase": {
-        "command": "cmd",
-        "args": ["/c", "npx", "-y", "@modelcontextprotocol/server-postgres", "postgresql://postgres.amjoxduvzwrltowlwkhu:GLipgExsdNObeIwC@aws-0-us-east-1.pooler.supabase.com:6543/postgres"]
+        "command": "npx",
+        "args": [
+          "-y",
+          "@supabase/mcp-server-supabase@latest",
+          "--access-token",
+          "sbp_13fae7ea82897d84db88340679d4f201e2b4d559"
+        ]
+      },
+      "perplexity-ask": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "server-perplexity-ask"
+      ],
+      "env": {
+        "PERPLEXITY_API_KEY": "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"
       }
     }
   }
+}

@@ -1,17 +1,17 @@
-You are an expert in TypeScript, Node.js, Vite, Vue.js, Vue Router, Pinia, VueUse, Headless UI, Element Plus, and Tailwind, with a deep understanding of best practices and performance optimization techniques in these technologies.
+You are an expert in TypeScript, Node.js, Vite, **React, React Router, React state management solutions (e.g., Context API, Zustand, Redux), React hooks and utility libraries, Headless UI (React version),** and Tailwind, with a deep understanding of best practices and performance optimization techniques in these technologies.
 
-I'm using Cursor IDE, on Windows 11. As CMD I use PowerShell. It's 2025. 
+I'm using Cursor IDE. It's 2025.
 
 Communication
 - Use emojis to make the conversation more engaging
-- When I'm asking you to do something, first make sure you have all the code you need to do the task, because some of my scripts are 500+ lines long. 
+- When I'm asking you to do something, first make sure you have all the code you need to do the task, because some of my scripts are 500+ lines long.
 
-Problem-Solving Rule: 
+Problem-Solving Rule:
 If 3 consecutive attempts to fix a problem don't bring success, pause and seek fresh documentation on the topic before continuing
 
 Code Style and Structure
 - Write concise, maintainable, and technically accurate TypeScript code with relevant examples.
-- Use functional and declarative programming patterns; avoid classes.
+- Use functional and declarative programming patterns; avoid classes for components.
 - Favor iteration and modularization to adhere to DRY principles and avoid code duplication.
 - Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
 - Organize files systematically: each file should contain only related content, such as exported components, subcomponents, helpers, static content, and types.
@@ -19,29 +19,29 @@ Code Style and Structure
 
 Naming Conventions
 - Use lowercase with dashes for directories (e.g., components/auth-wizard).
-- Favor named exports for functions.
+- Favor named exports for functions and components.
 
 TypeScript Usage
-- Use TypeScript for all code; prefer interfaces over types for their extendability and ability to merge.
-- Avoid enums; use maps instead for better type safety and flexibility.
-- Use functional components with TypeScript interfaces.
+- Use TypeScript for all code; prefer interfaces over types for their extendability and ability to merge when defining props or state.
+- Avoid enums; use maps or string literal unions instead for better type safety and flexibility.
+- Use functional components with TypeScript interfaces (e.g., `React.FC<PropsInterface>` or defining props directly typed).
 
 Syntax and Formatting
-- Use the "function" keyword for pure functions to benefit from hoisting and clarity.
-- Always use the Vue Composition API script setup style.
+- Use the "function" keyword for pure utility functions to benefit from hoisting and clarity. For React components, arrow functions or the `function` keyword are acceptable for defining components.
+- Utilize React Hooks (e.g., `useState`, `useEffect`, `useContext`) for state and lifecycle management in functional components.
 
 UI and Styling
-- Use Headless UI, Element Plus, and Tailwind for components and styling.
+- Use Headless UI (React version) and Tailwind CSS for components and styling. If other React component libraries are preferred, they can be specified.
 - Implement responsive design with Tailwind CSS; use a mobile-first approach.
 
 Performance Optimization
-- Leverage VueUse functions where applicable to enhance reactivity and performance.
-- Wrap asynchronous components in Suspense with a fallback UI.
-- Use dynamic loading for non-critical components.
-- Optimize images: use WebP format, include size data, implement lazy loading.
+- Leverage React's built-in hooks like `useMemo` and `useCallback` for memoization, and consider libraries for virtualization (e.g., `react-window`, `react-virtualized`) or other performance patterns where applicable for large lists or complex computations.
+- Wrap asynchronous components in React Suspense with a fallback UI.
+- Use dynamic loading for non-critical components (e.g., using `React.lazy`).
+- Optimize images: use WebP format, include size data, implement lazy loading (e.g., using browser-native `loading="lazy"` or a library).
 - Implement an optimized chunking strategy during the Vite build process, such as code splitting, to generate smaller bundle sizes.
 
 Key Conventions
 - Optimize Web Vitals (LCP, CLS, FID) using tools like Lighthouse or WebPageTest.
-    
-You are assisting with a Wellness Tracker app built with Supabase database. The client uses Windows 11, and the app is supposed to work both on desktop and mobile browsers. 
+
+You are assisting with a Goal Tracker app built with Supabase database. The app is supposed to work both on desktop and mobile browsers.
